@@ -1,5 +1,4 @@
 /* jshint node: true */
-
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'exemple',
@@ -43,13 +42,10 @@ module.exports = function(environment) {
     //ember s test ou -e
     ENV.apiHost = 'http://ec2-52-45-26-25.compute-1.amazonaws.com:5050',
 		ENV.apiNamespace = 'dev',
-    ENV.endpoint = 'hotels/:hotel_id/rooms/';
-
-
+    ENV.endpoint = 'hotels/:hotel_id/';
   }
 
   if (environment === 'production') {
-
   }
 
   return ENV;

@@ -1,13 +1,13 @@
-import ENV from 'ember-example/config/environment';
 import RESTAdapter from 'ember-data/adapters/rest';
+import ENV from 'exemple/config/environment';
 
 export default RESTAdapter.extend({
-  host: ENV.API_HOST,
-  namespace: 'api',
+  host: config.apiHost,
+    namespace: config.apiNamespace,
 
   buildURL(modelName, id, snapshot, requestType, query) {
     let url = this._super(modelName, id, snapshot, requestType, query);
-    return `${url}/${query.hotelId}/rooms/`;
+    return `${url}/dev/${query.hotel_id}`;
     //return `${url}/${query.hotelId}/rooms/${query.roomId}`;
   },
 
