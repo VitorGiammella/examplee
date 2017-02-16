@@ -1,0 +1,25 @@
+{{#each model as |hotel|}}
+  <h1>{{hotel.name}}</h1>
+  <h2>Details</h2>
+  <p><strong>Name:</strong> {{hotel.name}}</p>
+  <p><strong>Description:</strong> {{hotel.description}}</p>
+  <p><strong>Award:</strong> {{hotel.award}}</p>
+  <p><strong>isPreferential:</strong> {{hotel.isPreferential}}</p>
+  <p><strong>Address:</strong> {{hotel.location.address}}</p>
+  <p><strong>Latitude:</strong> {{hotel.location.coordinates.latitude}}</p>
+  <p><strong>Longitude:</strong> {{hotel.location.coordinates.longitude}}</p>
+  <h2>Rooms</h2>
+  {{#each hotel.rooms as |room|}}
+    <p>
+      <h3>{{room.name}}</h3>
+      <p><strong>Description:</strong> {{room.description}}</p>
+      <p><strong>Meal Plan:</strong> {{room.mealPlan}}</p>
+      <p><strong>Category:</strong> {{room.category}}</p>
+      <p><strong>Lodging:</strong> {{room.lodging}}</p>
+      <p><strong>MinPax:</strong> {{room.minPax}}</p>
+      <p><strong>MaxPax:</strong> {{room.maxPax}}</p>
+      <p><strong>QuantityAvailable:</strong> {{room.quantityAvailable}}</p>
+      <p><strong>isAvailable:</strong> {{room.isAvailable}}</p>
+    </p>
+  {{/each}}
+{{/each}}
