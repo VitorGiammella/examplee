@@ -7,7 +7,8 @@ export default RESTAdapter.extend({
 
   buildURL(modelName, id, snapshot, requestType, query) {
     let url = this._super(modelName, id, snapshot, requestType, query);
-    return `${url}/${query.hotelId}/rooms/${query.roomId}`;
+    return `${url}/${query.hotelId}/rooms/`;
+    //return `${url}/${query.hotelId}/rooms/${query.roomId}`;
   },
 
   query(store, type, query) {

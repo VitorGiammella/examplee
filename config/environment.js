@@ -40,6 +40,12 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+    //ember s test ou -e
+    ENV.apiHost = 'http://ec2-52-45-26-25.compute-1.amazonaws.com:5050',
+		ENV.apiNamespace = 'dev',
+    ENV.endpoint = 'hotels/:hotel_id/rooms/';
+
+
   }
 
   if (environment === 'production') {
